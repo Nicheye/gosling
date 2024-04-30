@@ -1,0 +1,127 @@
+html{
+	box-sizing: border-box;
+  }
+  *,
+  *::after,
+  *::before{
+	box-sizing: inherit;
+  }
+  
+  ul[class],
+  ol[class]{
+	padding: 0;
+  }
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ul[class],
+  ol[class],
+  li,
+  figure,
+  figcaption,
+  blockquote,
+  dl,
+  dd{
+	margin: 0;
+  }
+  ul[class]{
+	list-style: none;
+  }
+  img{
+	max-width: 100%;
+	display: block;
+  }
+  input,
+  button,
+  textarea,
+  select{
+	font: inherit;
+  }
+  a{
+	text-decoration: none;
+  }
+  .container{
+    max-width: 985px;
+    margin: 0 auto;
+  }
+  nav{
+    font-family: "Lily Script One", system-ui;
+    font-size: 35px;
+    color: #FF0099;
+
+  }
+  .nav-link{
+    
+  }
+  .navbar{
+    background-color: #050505 !important;
+    
+  }
+  .main-wrapper{
+    margin-top: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .card{
+    min-width: 400px;
+    border: 2px solid #000;
+    transition: all .2s;
+  }
+  .card:hover{
+    
+    border: 2px solid #FF0099;
+  }
+  .gosling-image{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .head-image{
+
+    height: 70px;
+    max-width: 124px;
+
+  }
+  .body-image{
+    height: 123px;
+    max-width: 106px;
+  }
+  .feet-image{
+    height: 129px;
+    max-width: 79px;
+  }
+  .boots-image{
+    height: 25px;
+    max-width: 71px;
+    
+  }
+  /*authentication*/
+  .auth_form{
+    background: #000;
+    padding: 40px;
+    margin-top: 200px;
+    border-radius: 15px;
+    
+  }
+  .auth_btn{
+    width: 100%;
+  }
+  .login_title{
+    text-align: center;
+    font-size: 55px;
+    font-family: "Lily Script One", system-ui;
+    color: #FF0099;
+  }
+  .screen{
+    margin-top: 20px;
+  }
+  .main-wrapper.profile{
+    margin-top: 40px;
+  }
