@@ -15,7 +15,7 @@ class Element(models.Model):
 	part = models.ForeignKey(Part_of_body,on_delete=models.CASCADE)
 	
 	def __str__(self) -> str:
-		return self.name
+		return self.name + f"  {self.id}"
 
 
 class Gosling(models.Model):

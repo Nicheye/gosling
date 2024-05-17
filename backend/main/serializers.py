@@ -7,7 +7,7 @@ class Element_serializer(ModelSerializer):
 	part = SerializerMethodField()
 	class Meta:
 		model = Element
-		fields = ['name','image','price','created_by','part']
+		fields = ['name','image','price','created_by','part','id']
 	def get_image(self,obj):
 		if obj.image:
 			return "http://127.0.0.1:8000/" + str(obj.image.url)
@@ -27,9 +27,10 @@ class Gosling_Serializer(ModelSerializer):
 	feet = SerializerMethodField()
 	boots = SerializerMethodField()
 	created_by = SerializerMethodField()
+	total= SerializerMethodField()
 	class Meta:
 		model = Gosling
-		fields =['head','body','feet','boots','created_by','title','description','is_accepted']
+		fields =['head','body','feet','boots','created_by','title','description','is_accepted','total','id']
 	
 	def get_head(self,obj):
 		if obj.head:
@@ -54,5 +55,10 @@ class Gosling_Serializer(ModelSerializer):
 		if obj.created_by:
 			
 			return obj.created_by.username
+	
+	def get_total(self,obj):
+		sum=0
+		sum+=obj.head.price+obj.body.price+obj.feet.price+obj.boots.price
+		return sum
 
 	
